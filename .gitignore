@@ -1,0 +1,73 @@
+# ==========================================
+#  C / C++ compiled objects and binaries
+# ==========================================
+
+# Object files
+*.o
+*.obj
+*.pdb
+*.ilk
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Static libraries
+*.a
+*.lib
+
+# Executables (common suffixes)
+*.exe
+*.out
+*.app
+
+# ==========================================
+#  Specifically ignore the homework binaries
+#  (since you'll compile hw1.c -> hw1)
+# ==========================================
+hw1
+hw2
+hw3
+a.out
+
+# ==========================================
+#  Build / output directories
+# ==========================================
+build/
+bin/
+cmake-build-*/
+Debug/
+Release/
+
+# ==========================================
+#  IDE / Editor junk
+# ==========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.csproj
+
+# ==========================================
+#  OS garbage files
+# ==========================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==========================================
+#  Logs, core dumps, temp files
+# ==========================================
+*.log
+core
+*.tmp
