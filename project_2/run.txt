@@ -1,0 +1,264 @@
+Number of Processes: 5
+Context Switch Time: 1
+Quantum (for Round Robin): 3
+
+Enter Process details (ProcessID ArrivalTime BurstTime Priority):
+P1 0 8 3
+P2 1 4 1
+P3 2 9 4
+P4 3 5 2
+P5 6 2 1
+
+======================================================
+Algorithm: FCFS
+======================================================
+
+Gantt Chart:
+[0-8: P1]
+[8-9: CONTEXT_SWITCH]
+[9-13: P2]
+[13-14: CONTEXT_SWITCH]
+[14-23: P3]
+[23-24: CONTEXT_SWITCH]
+[24-29: P4]
+[29-30: CONTEXT_SWITCH]
+[30-32: P5]
+
+Process Table:
+Process Arrival Burst   Priority Completion Waiting Turnaround Response Preemption
+P1      0       8       3        8          0       8          0        0
+P2      1       4       1        13         8       12         8        0
+P3      2       9       4        23         12      21         12       0
+P4      3       5       2        29         21      26         21       0
+P5      6       2       1        32         24      26         24       0
+
+Metrics:
+- Average Waiting Time: 13.00
+- Average Turnaround Time: 18.60
+- Average Response Time: 13.00
+- Max Waiting Time: 24
+- Min Waiting Time: 0
+- Total Context Switches: 4
+- Total Preemptions: 0
+- Total Simulation Time: 32
+- Total CPU Idle Time: 0
+- CPU Utilization: 87.50%
+- Throughput: 0.1563
+
+======================================================
+Algorithm: SJF
+======================================================
+
+Gantt Chart:
+[0-8: P1]
+[8-9: CONTEXT_SWITCH]
+[9-11: P5]
+[11-12: CONTEXT_SWITCH]
+[12-16: P2]
+[16-17: CONTEXT_SWITCH]
+[17-22: P4]
+[22-23: CONTEXT_SWITCH]
+[23-32: P3]
+
+Process Table:
+Process Arrival Burst   Priority Completion Waiting Turnaround Response Preemption
+P1      0       8       3        8          0       8          0        0
+P2      1       4       1        16         11      15         11       0
+P3      2       9       4        32         21      30         21       0
+P4      3       5       2        22         14      19         14       0
+P5      6       2       1        11         3       5          3        0
+
+Metrics:
+- Average Waiting Time: 9.80
+- Average Turnaround Time: 15.40
+- Average Response Time: 9.80
+- Max Waiting Time: 21
+- Min Waiting Time: 0
+- Total Context Switches: 4
+- Total Preemptions: 0
+- Total Simulation Time: 32
+- Total CPU Idle Time: 0
+- CPU Utilization: 87.50%
+- Throughput: 0.1563
+
+======================================================
+Algorithm: SRTF
+======================================================
+
+Gantt Chart:
+[0-1: P1]
+[1-2: CONTEXT_SWITCH]
+[2-6: P2]
+[6-7: CONTEXT_SWITCH]
+[7-9: P5]
+[9-10: CONTEXT_SWITCH]
+[10-15: P4]
+[15-16: CONTEXT_SWITCH]
+[16-23: P1]
+[23-24: CONTEXT_SWITCH]
+[24-33: P3]
+
+Process Table:
+Process Arrival Burst   Priority Completion Waiting Turnaround Response Preemption
+P1      0       8       3        23         15      23         0        1
+P2      1       4       1        6          1       5          1        0
+P3      2       9       4        33         22      31         22       0
+P4      3       5       2        15         7       12         7        0
+P5      6       2       1        9          1       3          1        0
+
+Metrics:
+- Average Waiting Time: 9.20
+- Average Turnaround Time: 14.80
+- Average Response Time: 6.20
+- Max Waiting Time: 22
+- Min Waiting Time: 1
+- Total Context Switches: 5
+- Total Preemptions: 1
+- Total Simulation Time: 33
+- Total CPU Idle Time: 0
+- CPU Utilization: 84.85%
+- Throughput: 0.1515
+
+======================================================
+Algorithm: Priority (NP)
+======================================================
+
+Gantt Chart:
+[0-8: P1]
+[8-9: CONTEXT_SWITCH]
+[9-18: P3]
+[18-19: CONTEXT_SWITCH]
+[19-24: P4]
+[24-25: CONTEXT_SWITCH]
+[25-29: P2]
+[29-30: CONTEXT_SWITCH]
+[30-32: P5]
+
+Process Table:
+Process Arrival Burst   Priority Completion Waiting Turnaround Response Preemption
+P1      0       8       3        8          0       8          0        0
+P2      1       4       1        29         24      28         24       0
+P3      2       9       4        18         7       16         7        0
+P4      3       5       2        24         16      21         16       0
+P5      6       2       1        32         24      26         24       0
+
+Metrics:
+- Average Waiting Time: 14.20
+- Average Turnaround Time: 19.80
+- Average Response Time: 14.20
+- Max Waiting Time: 24
+- Min Waiting Time: 0
+- Total Context Switches: 4
+- Total Preemptions: 0
+- Total Simulation Time: 32
+- Total CPU Idle Time: 0
+- CPU Utilization: 87.50%
+- Throughput: 0.1563
+
+======================================================
+Algorithm: Priority (P)
+======================================================
+
+Gantt Chart:
+[0-2: P1]
+[2-3: CONTEXT_SWITCH]
+[3-12: P3]
+[12-13: CONTEXT_SWITCH]
+[13-19: P1]
+[19-20: CONTEXT_SWITCH]
+[20-25: P4]
+[25-26: CONTEXT_SWITCH]
+[26-30: P2]
+[30-31: CONTEXT_SWITCH]
+[31-33: P5]
+
+Process Table:
+Process Arrival Burst   Priority Completion Waiting Turnaround Response Preemption
+P1      0       8       3        19         11      19         0        1
+P2      1       4       1        30         25      29         25       0
+P3      2       9       4        12         1       10         1        0
+P4      3       5       2        25         17      22         17       0
+P5      6       2       1        33         25      27         25       0
+
+Metrics:
+- Average Waiting Time: 15.80
+- Average Turnaround Time: 21.40
+- Average Response Time: 13.60
+- Max Waiting Time: 25
+- Min Waiting Time: 1
+- Total Context Switches: 5
+- Total Preemptions: 1
+- Total Simulation Time: 33
+- Total CPU Idle Time: 0
+- CPU Utilization: 84.85%
+- Throughput: 0.1515
+
+======================================================
+Algorithm: Round Robin
+======================================================
+
+Gantt Chart:
+[0-3: P1]
+[3-4: CONTEXT_SWITCH]
+[4-7: P2]
+[7-8: CONTEXT_SWITCH]
+[8-11: P3]
+[11-12: CONTEXT_SWITCH]
+[12-15: P4]
+[15-16: CONTEXT_SWITCH]
+[16-19: P1]
+[19-20: CONTEXT_SWITCH]
+[20-22: P5]
+[22-23: CONTEXT_SWITCH]
+[23-24: P2]
+[24-25: CONTEXT_SWITCH]
+[25-28: P3]
+[28-29: CONTEXT_SWITCH]
+[29-31: P4]
+[31-32: CONTEXT_SWITCH]
+[32-34: P1]
+[34-35: CONTEXT_SWITCH]
+[35-38: P3]
+
+Process Table:
+Process Arrival Burst   Priority Completion Waiting Turnaround Response Preemption
+P1      0       8       3        34         26      34         0        2
+P2      1       4       1        24         19      23         3        1
+P3      2       9       4        38         27      36         6        2
+P4      3       5       2        31         23      28         9        1
+P5      6       2       1        22         14      16         14       0
+
+Metrics:
+- Average Waiting Time: 21.80
+- Average Turnaround Time: 27.40
+- Average Response Time: 6.40
+- Max Waiting Time: 27
+- Min Waiting Time: 14
+- Total Context Switches: 10
+- Total Preemptions: 6
+- Total Simulation Time: 38
+- Total CPU Idle Time: 0
+- CPU Utilization: 73.68%
+- Throughput: 0.1316
+
+=========================================================================================================
+Algorithm Comparison
+=========================================================================================================
+Algorithm       Avg Waiting     Avg Turnaround  Avg Response    Context Switches   CPU Utilization  Throughput
+---------------------------------------------------------------------------------------------------------
+FCFS            13.00           18.60           13.00           4                  87.50          % 0.1563
+SJF             9.80            15.40           9.80            4                  87.50          % 0.1563
+SRTF            9.20            14.80           6.20            5                  84.85          % 0.1515
+Priority (NP)   14.20           19.80           14.20           4                  87.50          % 0.1563
+Priority (P)    15.80           21.40           13.60           5                  84.85          % 0.1515
+Round Robin     21.80           27.40           6.40            10                 73.68          % 0.1316
+
+======================================================
+Best Algorithms By Category
+======================================================
+- Lowest Average Waiting Time: SRTF (9.20)
+- Lowest Average Turnaround Time: SRTF (14.80)
+- Lowest Average Response Time: SRTF (6.20)
+- Lowest Context Switches: FCFS (4)
+- Highest CPU Utilization: FCFS (87.50%)
+======================================================
